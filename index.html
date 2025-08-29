@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>2025年度IPA未踏ターゲット事業 キックオフミーティング</title>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/white.css" id="theme">
+  <style>
+    html {
+      font-family: "A-OTF 新ゴ Pro", "Noto Sans Japanese";
+    }
+
+    .layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    
+    .layout .title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      flex: 0 0 auto;
+      text-align: left;
+    }
+    .layout .body {
+      font-size: 0.8em;
+      flex: 1 1 auto;
+      overflow: auto;
+      text-align: left;
+    }
+
+    .reveal .slides section .container{ display: flex; }
+    .reveal .slides section .container .col{ flex: 1; }
+
+  </style>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+    <!-- タイトルスライド -->
+    <section>
+      <p style="font-size: 1.4em; margin-bottom: 0.5em;">IPA未踏ターゲット 中間報告</p>
+      <p style="font-size: 1.2em; margin-bottom: 0.5em;">NeuMoReservoir</p>
+      <p style="font-size: 1.0em; margin-bottom: 0.5em;">神経細胞の形態が生み出す時空間ダイナミクス</p>
+      <p style="font-size: 1.0em;">深水 智史</p>
+    </section>
+    <section>
+      <section data-background-image="figure/NeuronForest.png" style="color: white">
+        <p style="font-size:40px;">目的</p>
+         <ul style="font-size: 20px;">
+           <li>多様で複雑な形態を有する単一の神経細胞で発生する時系列情報処理の原理を明らかにすることで、脳の理解を目指すこと
+           <li>単一の神経細胞の情報処理原理から、工学的な脳情報処理モデルを構築すること
+         </ul>
+        <p style="font-size:40px;">目標</p>
+        <ul style="font-size: 20px;">
+          <li>様々な神経細胞の形態データを用いてリザバーコンピューティングを行うためのシミュレーション環境を整備し、性能評価を行う
+          <li>神経細胞の形態と、非線形現象、更には情報処理能力の関係性を明らかにすること
+          <li>作成したソフトウェアをオープンソースとして公開する
+        </ul>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">背景 -なぜ私がこのプロジェクトをやるのか-</p>
+        <p style="font-size:20px;">単一の神経細胞でもおもしろい現象がたくさん起こるから</p>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:20px;">背景 -なぜ私がこのプロジェクトをやるのか-</p>
+        <p style="font-size:35px;">単一の神経細胞でもおもしろい現象がたくさん起こるから</p>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:20px;">背景 -なぜ私がこのプロジェクトをやるのか-</p>
+        <p style="font-size:35px;">単一の神経細胞でもおもしろい現象がたくさん起こるから</p>
+        <div class="container">
+          <div class="col">
+            <img src="figure/DendriticComputation.jpg", alt="dendritic computation", width="400">
+            <p style="font-size:40px;">Payeur et al., 2019</p>
+          </div>
+          <div class="col">
+            <br>
+            <br>
+            <br>
+            <p style="font-size:40px;">樹状突起計算</p>
+            <p style="font-size:30px;">樹状突起上のシナプスの時空間パタンが情報処理に寄与する</p>
+          </div>
+        </div>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:20px;">背景 -なぜ私がこのプロジェクトをやるのか-</p>
+        <p style="font-size:35px;">単一の神経細胞でもおもしろい現象がたくさん起こるから</p>
+        <div class="container">
+          <div class="col">
+            <br>
+            <br>
+            <br>
+            <p style="font-size:40px;">カオス</p>
+            <p style="font-size:40px;">安定な領域(アトラクタ)の内部で初期値に依存した不安定性が共存する</p>
+          </div>
+          <div class="col">
+            <img src="figure/OnchidiumPacemakerChaos.png", alt="onchidium pacemaker neuron exhibit chaos", width="500">
+            <p style="font-size:40px;">Hayashi and Ishizuka, 1992</p>
+          </div>
+        </div>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:20px;">背景 -なぜ私がこのプロジェクトをやるのか-</p>
+        <p style="font-size:35px;">単一の神経細胞でもおもしろい現象がたくさん起こるから</p>
+        <div class="container">
+          <div class="col">
+            <img src="figure/NIS.png", alt="noise-induced synchronization", width="1000">
+            <p style="font-size:40px;">Mainenn and Sejnowski, 1995</p>
+          </div>
+          <div class="col">
+            <br>
+            <br>
+            <p style="font-size:40px;">ノイズ誘導同期</p>
+            <p style="font-size:40px;">ニューロンはノイズ印加下で初めて信頼性をもった素子として働く</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">リザバー計算とノイズ誘導同期</p>
+        <div class="container">
+          <div class="col">
+            <img src="figure/GIS.png", alt="genelralized synchronization", width="1000">
+            <p style="font-size:40px;">Ohkubo and Inubushi, 2024</p>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">リザバー計算とノイズ誘導同期</p>
+        <img src="figure/GIS_NIS.png", alt="GIS_NIS", width="800">
+        <div class="container">
+          <div class="col">
+            <p style="font-size:30px;">Ohkubo and Inubushi, 2024</p>
+          </div>
+          <div class="col">
+            <p style="font-size:30px;">Mainenn and Sejnowski, 1995</p>
+          </div>
+        </div>
+        <p style="font-size:20px;">リザバー計算に重要な役割を果たす力学特性を神経細胞が有しており<br>シミュレーションではない実際の神経細胞(ウェットウェア)を計算機として活用できる可能性</p>
+      </section>
+      <section>
+        <p style="font-size:40px;">結果</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <p style="font-size:40px;">カオス・フラクタル</p>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">反復関数系(Iterated Function System, IFS)</p>
+        <p>フラクタルをダイナミクスとして生成する手法</p>
+        <img src="figure/IFS.png", alt="iterated function system", width="500">
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">反復関数系(Iterated Function System, IFS)</p>
+        <p>フラクタルをダイナミクスとして生成する手法</p>
+        <img src="figure/IFS0.png", alt="iterated function system", width="500">
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">反復関数系(Iterated Function System, IFS)</p>
+        <p>フラクタルをダイナミクスとして生成する手法</p>
+        <img src="figure/IFS1.png", alt="iterated function system", width="500">
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">反復関数系(Iterated Function System, IFS)</p>
+        <p>フラクタルをダイナミクスとして生成する手法</p>
+        <img src="figure/IFS2.png", alt="iterated function system", width="500">
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">反復関数系(Iterated Function System, IFS)</p>
+        <p>フラクタルをダイナミクスとして生成する手法</p>
+        <img src="figure/IFS2.png", alt="iterated function system", width="500">
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">反復関数系(Iterated Function System, IFS)</p>
+        <p>フラクタルをダイナミクスとして生成する手法</p>
+        <img src="figure/IFS3.png", alt="iterated function system", width="500">
+      </section>
+      <section>
+        <p style="font-size:40px;">脳の中のIFS</p>
+        <img src="figure/CantorCoding_network.png", alt="cantor coding network architecture", width="500">
+        <p style="font-size:25px;">Yamaguti et al., 2011</p>
+        <li style="font-size:30px">3つのバイナリパタンをランダムに生成する</li>
+        <li style="font-size:30px">3つのうち1つを毎時刻選択して入力する</li>
+      </section>
+      <section>
+        <p style="font-size:40px;">脳の中のIFS</p>
+        <img src="figure/CantorCoding.png", alt="cantor coding", width="500">
+      </section>
+      <section>
+        <p style="font-size:40px;">脳の中のIFS</p>
+        <img src="figure/CantorCoding2.png", alt="cantor coding", width="500">
+      </section>
+      <section>
+        <p style="font-size:40px;">脳の中のIFS</p>
+        <img src="figure/CantorCoding4.png", alt="cantor coding", width="500">
+        <p>フラクタルを形作るメカニズムはカオス</p>
+       </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">脳の中のIFS</p>
+        <img src="figure/CantorCoding3.png", alt="cantor coding", width="500">
+        <p style="font-size:30px">基本的にリザバー計算にカオス力学系は使えない</p>
+       </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">脳の中のIFS</p>
+        <img src="figure/CantorCoding3.png", alt="cantor coding", width="500">
+        <p style="font-size:30px">基本的にリザバー計算にカオス力学系は使えない</p>
+        <p style="font-size:30px">階層的な記憶の符号化によって線形リードアウトが可能になる</p>
+      </section>
+      <section data-auto-animate>
+        <img src="figure/reservoir.png", alt="cantor coding", width="1000">
+      </section>
+      <section data-auto-animate>
+      </section>
+      </section>
+    <section>
+      <section data-auto-animate style="font-size:30px">
+        <p style="font-size:40px;">Summary</p>
+          <p>ノイズ誘導同期</p>
+          <ul>
+            <li>今回の条件設定ではノイズ誘導同期は発生しなかった</li>
+            <li>入力スパイク列の相関と樹状突起上のシナプスの配置を検討する</li>
+          </ul>
+      </section>
+      <section data-auto-animate style="font-size:30px">
+        <p style="font-size:40px;">Summary</p>
+          <p>カオス/フラクタル</p>
+          <ul>
+            <li>フィードフォワード型ニューラルネットワークをリザバー層に活用したリザバー計算を実装した</li>
+            <li>単一ニューロンのフラクタルとネットワークのフラクタルを共存させられるか</li>
+            <li>単一ニューロンの非線形性とノード数のみのチューニングで性能向上を期待できるリザバー計算</li>
+            <li>長期的にこの物理系の計算能力を飼いならすようなタスクを考えたい</li>
+          </ul>
+      </section>
+    </section>
+  </div>
+</div>
+
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width: 960,
+    height: 700,
+    slideNumber: true
+  });
+</script>
+<!-- Printing and PDF exports -->
+<script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</body>
+</html>
