@@ -102,8 +102,8 @@
             <a  style="font-size:20px" href="https://corticallabs.com/cl1">Cortical Labs CL1</a>
           </div>
         </div>
-        <p style="font-size:30px;">単純なパターンを覚えるニューラルネットワークとして活用している</p>
-        <p style="font-size:30px;">ホンモノのニューロンを使う意義のある計算をさせたい</p>
+        <p style="font-size:30px;">より系の計算能力を引き出したい</p>
+        <p style="font-size:30px;">ホンモノのニューロンを使う意義のある計算をする必要がある</p>
       </section>
     </section>
     <section>
@@ -170,7 +170,71 @@
         </p>
       </section>
       <section>
+        <p style="font-size:40px;">方法</p>
+        <img src="figure/ReservoirSchematic.png", alt="neuronal reservoir schematic diagram", width="1000">
+      </section>
+      <section>
+        <p style="font-size:40px;">データからスパイク列への変換</p>
+        <div class="container">
+          <div class="col">
+            <img src="figure/DataToSpike.png", alt="neuronal reservoir schematic diagram", width="400">
+          </div>
+          <div class="col">
+            <br>
+            <br>
+            <br>
+            <p style="font-size:35px;">入力データを入力層の<br>ニューロンのスパイク列として入力</p>
+          </div>
+        </div>
+      </section>
+      <section data-auto-animate>
         <p style="font-size:40px;">結果</p>
+        <div class="container">
+          <div class="col">
+            <br>
+            <br>
+            <br>
+            <p style="font-size:20px;">過去の入力を思い出すように訓練</p>
+          </div>
+          <div class="col">
+            <img src="figure/SpikeDisruptsMemory.png", alt="spike disrupts memory", width="800">
+          </div>
+        </div>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">結果</p>
+        <div class="container">
+          <div class="col">
+            <br>
+            <br>
+            <br>
+            <p style="font-size:20px;">過去の入力を思い出すように訓練</p>
+            <p style="font-size:20px;">スパイクは記憶を忘却させる</p>
+          </div>
+          <div class="col">
+            <img src="figure/SpikeDisruptsMemory.png", alt="spike disrupts memory", width="800">
+          </div>
+        </div>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">結果</p>
+        <img src="figure/Sinwave.png", alt="sinusoidal wave generation", width="1000">
+        <p style="font-size:30px;">正弦波のように簡単な周期信号がフーリエ変換様の原理で取り出せる</p>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">結果</p>
+        <div class="container">
+          <div class="col">
+            <img src="figure/NISreservoir.png", alt="sinusoidal wave generation", width="400">
+          </div>
+          <div class="col">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p style="font-size:20px;">今のところ信頼性のある出力は得られていない</p>
+          </div>
       </section>
     </section>
     <section>
@@ -261,13 +325,10 @@
       </section>
       <section data-auto-animate>
         <img src="figure/reservoir.png", alt="cantor coding", width="1000">
+        <p style="font-size:20px;">時系列生成のようなタスクには向かない</p>
       </section>
       <section data-auto-animate>
         <p style="font-size:40px;">シングルニューロンのダイナミクスもフラクタルになるか？</p>
-      </section>
-      <section data-auto-animate>
-        <p style="font-size:40px;">シングルニューロンのダイナミクスもフラクタルになるか？</p>
-        <p>なる</p>
       </section>
     </section>
     <section>
@@ -284,15 +345,16 @@
           <p>カオス/フラクタル</p>
           <ul>
             <li>フィードフォワード型ニューラルネットワークをリザバー層に活用したリザバー計算を実装した</li>
-            <li>単一ニューロンのフラクタルとネットワークのフラクタルを共存させられるか</li>
             <li>単一ニューロンの非線形性とノード数のみのチューニングで性能向上を期待できるリザバー計算</li>
-            <li>長期的にこの物理系の計算能力を飼いならすようなタスクを考えたい</li>
+            <li>単一ニューロンのダイナミクスをフラクタルにするには、今後のさらなる取り組みが必要である。</li>
+            <li>適応性つきの異常検知のようなタスクに使える可能性がある</li>
           </ul>
       </section>
       <section data-auto-animate style="font-size:30px">
         <p style="font-size:40px;">今後の方向性</p>
-        <li>ウェットウェアへの展開</li>
-        <li>フィードフォワード型リザバーを用いた異常検知への応用</li>
+        <ul>
+          <li>細胞内カルシウム動態のモデリング</li>
+        </ul>
       </section>
     </section>
   </div>
