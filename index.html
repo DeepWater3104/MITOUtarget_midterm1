@@ -122,10 +122,25 @@
         <p style="font-size:30px;">ホンモノのニューロンを使う意義のある計算とは？</p>
         <p style="font-size:20px;">ホンモノのニューロンに特異的な振る舞いを使った計算</p>
       </section>
-
       <section data-auto-animate>
         <p style="font-size:20px;">ホンモノのニューロンを使う意義のある計算とは？</p>
         <p style="font-size:35px;">ホンモノのニューロンに特異的な振る舞いを使った計算</p>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:20px;">ホンモノのニューロンを使う意義のある計算とは？</p>
+        <p style="font-size:20px;">ホンモノのニューロンに特異的な振る舞いを使った計算</p>
+        <p style="font-size:35px;">本日のアジェンダ</p>
+        <li>ノイズ</li>
+        <li>カオス/フラクタル</li>
+      </section>
+      <section data-auto-animate>
+        <p style="font-size:20px;">ホンモノのニューロンを使う意義のある計算とは？</p>
+        <p style="font-size:20px;">ホンモノのニューロンに特異的な振る舞いを使った計算</p>
+        <p style="font-size:35px;">本日のアジェンダ</p>
+        <li>ノイズ</li>
+          <p style="font-size:20px">ロバストネスの問題</p>
+        <li>カオス/フラクタル</li>
+          <p style="font-size:20px">複雑な振る舞いを使えば高度な情報処理の実現が期待できる</p>
       </section>
       <section data-auto-animate>
         <p style="font-size:20px;">ホンモノのニューロンを使う意義のある計算とは？</p>
@@ -230,6 +245,18 @@
         <p style="font-size:30px;">正弦波のように簡単な周期信号がフーリエ変換様の原理で取り出せる</p>
       </section>
       <section data-auto-animate>
+        <p style="font-size:40px;">結果</p>
+        <div class="container">
+          <div class="col">
+            <img src="figure/Sinwave.png", alt="sinusoidal wave generation", width="1000">
+          </div>
+          <div class="col">
+            <video source src="figure/Sinwave_video.mkv" data-autoplay loop></video>
+          </div>
+        </div>
+        <p style="font-size:30px;">正弦波のように簡単な周期信号がフーリエ変換様の原理で取り出せる</p>
+      </section>
+      <section data-auto-animate>
         <img src="figure/ReservoirSchematic_noise.png", alt="neuronal reservoir with noise induction schematic diagram", width="1000">
       </section>
       <section data-auto-animate>
@@ -309,6 +336,13 @@
         <p>フラクタルをダイナミクスとして生成する手法</p>
         <img src="figure/IFS3.png", alt="iterated function system", width="500">
       </section>
+      <section data-auto-animate>
+        <p style="font-size:40px;">反復関数系(Iterated Function System, IFS)</p>
+        <p>フラクタルをダイナミクスとして生成する手法</p>
+        <img src="figure/IFS3.png", alt="iterated function system", width="500">
+        <p style="font-size:20px">現在の状態のみから過去に選択された頂点の系列がすべて取り出せる</p>
+        <p style="font-size:20px">理想的には無限長の記憶をもつシステム</p>
+      </section>
       <section>
         <p style="font-size:40px;">脳の中のIFS</p>
         <img src="figure/CantorCoding_network.png", alt="cantor coding network architecture", width="500">
@@ -362,6 +396,7 @@
           <ul>
             <li>今回の条件設定ではノイズ誘導同期は発生しなかった</li>
             <li>入力スパイク列の相関と樹状突起上のシナプスの配置を検討する</li>
+            <li>中程度のノイズ強度よりも、よりノイズが強いときのほうが性能が高くなった</li>
           </ul>
       </section>
       <section data-auto-animate style="font-size:30px">
@@ -376,9 +411,17 @@
       </section>
       <section data-auto-animate style="font-size:30px">
         <p style="font-size:40px;">今後の方向性</p>
-        <ul>
-          <li>細胞内カルシウム動態のモデリング</li>
-        </ul>
+        <div class="container">
+          <div class="col">
+              <p style="font-size:30px;">細胞内カルシウム動態のモデリング</p>
+              <p style="font-size:20px;">現行の実験技術的制約を考慮して、膜電位ではなくカルシウムの精緻なモデリングにより実験的な試行錯誤を減らす</p>
+          </div>
+          <div class="col">
+            <img src="figure/CalciumImaging.png", alt="corticallab schematic", width="200">
+            <img src="figure/CalciumImaging_schematic.png", alt="corticallab schematic", width="300">
+            <p style="font-size:30px;">Gonzalez et al., 2025</p>
+          </div>
+        </div>
       </section>
     </section>
   </div>
